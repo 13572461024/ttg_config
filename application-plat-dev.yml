@@ -2,7 +2,7 @@
   port: 8001
 spring:
   application:
-    name: USER-PROVIDER #name不能使用下划线
+    name: TTG-PLAT #name不能使用下划线
 eureka:
   client:
     service-url:
