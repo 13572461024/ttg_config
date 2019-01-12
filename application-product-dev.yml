@@ -2,10 +2,18 @@
   port: 8002
 spring:
   application:
-    name: TTG-PRODUCT #name不能使用下划线
+    name: TTG-PRODUCT
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ttg_product
+    username: root
+    password: admin
+mybatis-plus:
+  mapper-locations: classpath:cn/itsource/ttg/mapper/*Mapper.xml
+  type-aliases-package: cn.itsource.ttg.domain,cn.itsource.ttg.query
 eureka:
   client:
     service-url:
-     defaultZone: http://localhost:7001/eureka #告诉服务提供者要把服务注册到哪儿
+      defaultZone: http://localhost:7001/eureka
   instance:
-        prefer-ip-address: true #显示客户端真实ip
+    prefer-ip-address: tru
